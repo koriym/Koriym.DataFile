@@ -1,10 +1,11 @@
 # Koriym.DataFile
+[![Continuous Integration](https://github.com/koriym/Koriym.DataFile/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/koriym/Koriym.DataFile/actions/workflows/continuous-integration.yml)
 
 Validate and load the XML file.
 
 ## Installation
 
-    composer require
+    composer require koriym/data-file
 
 ## Usage
 

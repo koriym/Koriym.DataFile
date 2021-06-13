@@ -1,10 +1,10 @@
 {
     "name": "koriym/data-file",
-    "description": "",
+    "description": "Load XML file with XSD validation",
     "license": "MIT",
     "authors": [
         {
-            "name": "koriym",
+            "name": "Akihito Koriyama",
             "email": "akihito.koriyama@gmail.com"
         }
     ],

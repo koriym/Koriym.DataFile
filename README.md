@@ -28,6 +28,6 @@ assert($xml instanceof SimpleXMLElement);
 ```
 
 Loads the `config.xml` or `config.xml.dist` of the specified directory.
-'config.xml' will be read first.
+`config.xml` will be loaded first.
 
 It is common to ignore dist files to save them in the repository and not to save the local files.

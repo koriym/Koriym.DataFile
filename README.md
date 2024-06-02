@@ -1,5 +1,6 @@
 # Koriym.DataFile
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/koriym/Koriym.DataFile/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/koriym/Koriym.DataFile/?branch=master)
 [![Type Coverage](https://shepherd.dev/github/bearsunday/BEAR.Package/coverage.svg)](https://shepherd.dev/github/bearsunday/BEAR.Package)
 [![Continuous Integration](https://github.com/koriym/Koriym.DataFile/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/koriym/Koriym.DataFile/actions/workflows/continuous-integration.yml)
 

@@ -7,7 +7,6 @@ namespace Koriym\DataFile;
 use Koriym\DataFile\Exception\DataFileNotFoundException;
 use SimpleXMLElement;
 
-use function assert;
 use function dirname;
 use function file_exists;
 use function getcwd;
@@ -44,7 +43,11 @@ final class XmlConfigLoad
         }
 
         $dirPath = realpath($path) ?: getcwd();
-        assert(is_dir((string) $dirPath));
+        if (! is_dir($dirPath)) {
+            // @codeCoverageIgnoreStart
+            throw new DataFileNotFoundException($dirPath);
+            // @codeCoverageIgnoreEnd
+        }
 
         do {
             $maybePath = sprintf('%s/%s', $dirPath, $this->configName);

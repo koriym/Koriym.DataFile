@@ -44,7 +44,7 @@ final class XmlConfigLoad
         }
 
         $dirPath = realpath($path) ?: getcwd();
-        assert(is_dir($dirPath));
+        assert(is_dir((string) $dirPath));
 
         do {
             $maybePath = sprintf('%s/%s', $dirPath, $this->configName);

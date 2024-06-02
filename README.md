@@ -9,8 +9,6 @@
 
 This library helps you easily validate and load XML configuration files using XSD schemas. It's designed to ensure the integrity and consistency of your configuration data with minimal effort. Additionally, it can be used to load and validate general XML files.
 
-
-
 ## Installation
 
 To get started, install the required package using Composer:

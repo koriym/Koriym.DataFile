@@ -43,9 +43,9 @@ final class XmlConfigLoad
         }
 
         $dirPath = realpath($path) ?: getcwd();
-        if (! is_dir($dirPath)) {
+        if (! is_dir((string) $dirPath)) {
             // @codeCoverageIgnoreStart
-            throw new DataFileNotFoundException($dirPath);
+            throw new DataFileNotFoundException($path);
             // @codeCoverageIgnoreEnd
         }
 

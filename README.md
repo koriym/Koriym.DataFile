@@ -2,6 +2,7 @@
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/koriym/Koriym.DataFile/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/koriym/Koriym.DataFile/?branch=master)
 [![Type Coverage](https://shepherd.dev/github/bearsunday/BEAR.Package/coverage.svg)](https://shepherd.dev/github/bearsunday/BEAR.Package)
+[![codecov](https://codecov.io/gh/koriym/Koriym.DataFile/graph/badge.svg?token=GNEC7OBLN9)](https://codecov.io/gh/koriym/Koriym.DataFile)
 [![Continuous Integration](https://github.com/koriym/Koriym.DataFile/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/koriym/Koriym.DataFile/actions/workflows/continuous-integration.yml)
 
 ## XML Config Loader

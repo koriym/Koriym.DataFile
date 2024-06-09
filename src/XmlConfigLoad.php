@@ -42,19 +42,10 @@ final class XmlConfigLoad
             return $path;
         }
 
-        $maybePath = sprintf('%s/%s', getcwd(), $path);
-        if (file_exists($maybePath) && ! is_dir($maybePath)) {
-            // @codeCoverageIgnoreStart
-            return $maybePath;
-        }
-
         $dirPath = realpath($path) ?: getcwd();
-        if ($dirPath === false) {
-            goto config_not_found;
-        }
-
-        if (! is_dir($dirPath)) { // @phpstan-ignore-line
-            $dirPath = dirname($dirPath); // @phpstan-ignore-line
+        if (! is_dir((string) $dirPath)) {
+            // @codeCoverageIgnoreStart
+            throw new DataFileNotFoundException($path);
             // @codeCoverageIgnoreEnd
         }
 
@@ -66,8 +57,6 @@ final class XmlConfigLoad
 
             $dirPath = dirname($dirPath); // @phpstan-ignore-line
         } while (dirname($dirPath) !== $dirPath);
-
-        config_not_found:
 
         throw new DataFileNotFoundException($path);
     }

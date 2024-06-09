@@ -1,15 +1,29 @@
 # Koriym.DataFile
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/koriym/Koriym.DataFile/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/koriym/Koriym.DataFile/?branch=master)
+[![Type Coverage](https://shepherd.dev/github/bearsunday/BEAR.Package/coverage.svg)](https://shepherd.dev/github/bearsunday/BEAR.Package)
+[![codecov](https://codecov.io/gh/koriym/Koriym.DataFile/graph/badge.svg?token=GNEC7OBLN9)](https://codecov.io/gh/koriym/Koriym.DataFile)
 [![Continuous Integration](https://github.com/koriym/Koriym.DataFile/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/koriym/Koriym.DataFile/actions/workflows/continuous-integration.yml)
 
-Validate and load the XML file.
+## XML Config Loader
+
+This library helps you easily validate and load XML configuration files using XSD schemas. It's designed to ensure the integrity and consistency of your configuration data with minimal effort. Additionally, it can be used to load and validate general XML files.
 
 ## Installation
 
-    composer require koriym/data-file
+To get started, install the required package using Composer:
+
+```bash
+composer require koriym/data-file
+```
+
+Validate and load the XML file.
 
 ## Usage
 
-Simple XML load with validation
+### Simple XML Load with Validation
+
+Load and validate your XML files with just a few lines of code:
 
 ```php
 use Koriym\DataFile\XmlLoad;
@@ -18,7 +32,9 @@ $xml = (new XmlLoad())('/path/to/xml', '/path/to/xsd');
 assert($xml instanceof SimpleXMLElement);
 ```
 
-Config xml load
+### Config XML Load
+
+Easily load configuration files (`config.xml` or `config.xml.dist`) from the specified directory. If both files are present, config.xml is loaded first:
 
 ```php
 use Koriym\DataFile\XmlConfigLoad;
@@ -27,7 +43,9 @@ $xml = (new XmlConfigLoad('confilg.xml'))('/path/to/config_dir', '/path/to/xsd')
 assert($xml instanceof SimpleXMLElement);
 ```
 
-Loads the `config.xml` or `config.xml.dist` of the specified directory.
-`config.xml` will be loaded first.
+Using `.dist` files allows you to maintain default settings in your repository while keeping local configurations separate.
 
-It is common to ignore dist files to save them in the repository and not to save the local files.
+### Notes
+
+- The XSD schema ensures your XML files adhere to the defined structure and content standards.
+- `.dist` files are useful for providing default configurations that can be overridden by local settings.
